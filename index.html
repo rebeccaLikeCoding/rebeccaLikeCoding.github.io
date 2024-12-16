@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca Liu - Software Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            document.documentElement.classList.toggle('light');
+        }
+    </script>
+    <style>
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+
+        .glass-light {
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-dark {
+            backdrop-filter: blur(16px);
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .dark {
+            color-scheme: dark;
+        }
+
+        /* Light mode background */
+        .light {
+            background-color: #f8fafc;
+        }
+
+        /* Dark mode background */
+        .dark {
+            background-color: #0f172a;
+        }
+
+        .card-light {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-dark {
+            background: rgba(30, 41, 59, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="transition-colors duration-300">
+    <!-- Theme Toggle -->
+    <button onclick="toggleDarkMode()" class="fixed top-4 right-4 z-50 p-2 rounded-full bg-gray-200 dark:bg-slate-700 hover:scale-110 transition-transform">
+        <i class="fas fa-moon dark:hidden"></i>
+        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+    </button>
+
+    <!-- Header/Hero Section -->
+    <header class="relative overflow-hidden min-h-screen flex items-center bg-gray-100 dark:bg-slate-900">
+        <div class="absolute inset-0 animate-gradient bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 opacity-10 dark:opacity-20"></div>
+        <div class="container mx-auto px-4 z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="light:glass-light dark:glass-dark p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 float">
+                    <h1 class="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Rebecca Liu</h1>
+                    <p class="text-2xl mb-6 text-gray-800 dark:text-gray-200">Lead Software Engineer</p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+                        <a href="mailto:rebecca.liu@example.com" class="flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 hover:scale-105 transition-transform text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-envelope"></i> rebecca.liu@example.com
+                        </a>
+                        <a href="tel:+61400123456" class="flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 hover:scale-105 transition-transform text-gray-800 dark:text-gray-200">
+                            <i class="fas fa-phone"></i> +61 123 456 789
+                        </a>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://linkedin.com/in/rebecca-liu" class="hover:scale-110 transition-transform text-2xl text-blue-600 dark:text-blue-400">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/rebeccaLikeCoding" class="hover:scale-110 transition-transform text-2xl text-gray-800 dark:text-gray-200">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 max-w-4xl bg-gray-100 dark:bg-slate-900">
+        <!-- Professional Summary -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Professional Summary</h2>
+            <div class="card-light dark:card-dark p-6 rounded-xl text-gray-800 dark:text-gray-200">
+                <p class="leading-relaxed">
+                    Experienced software engineer with over 10 years of expertise in full-stack development, specializing in scalable systems, cloud architecture, and innovative tech solutions. Proven track record of success leading development teams, mentoring interns, and delivering impactful projects for globally recognized companies like Stark Industries and Axis Technology Labs.
+                </p>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card-light dark:card-dark p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">Programming Languages</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Python, JavaScript, C++, Java</p>
+                </div>
+                <div class="card-light dark:card-dark p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">Web Technologies</h3>
+                    <p class="text-gray-700 dark:text-gray-300">React, Node.js, Next.js, TypeScript</p>
+                </div>
+                <div class="card-light dark:card-dark p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">Cloud Platforms</h3>
+                    <p class="text-gray-700 dark:text-gray-300">AWS, Azure, Google Cloud</p>
+                </div>
+                <div class="card-light dark:card-dark p-6 rounded-xl hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">DevOps Tools</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Docker, Kubernetes, Jenkins, Terraform</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Professional Experience</h2>
+            
+            <!-- Axis Technology Labs -->
+            <div class="card-light dark:card-dark p-6 rounded-xl mb-6 hover:scale-102 transition-transform">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200">Software Engineering Lead</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-2">Axis Technology Labs | Sydney, NSW</p>
+                <p class="text-gray-500 mb-4">January 2018 – December 2021</p>
+                <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-blue-600 dark:text-blue-400"></i>
+                        Directed a team of 15 developers to create innovative tech solutions
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-blue-600 dark:text-blue-400"></i>
+                        Developed and launched a cutting-edge AR/VR platform
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-blue-600 dark:text-blue-400"></i>
+                        Optimized backend systems, reducing API response times by 50%
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Stark Industries -->
+            <div class="card-light dark:card-dark p-6 rounded-xl hover:scale-102 transition-transform">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200">Senior Software Engineer</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-2">Stark Industries | Melbourne, VIC</p>
+                <p class="text-gray-500 mb-4">January 2013 – December 2017</p>
+                <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-blue-600 dark:text-blue-400"></i>
+                        Designed and implemented advanced AI systems
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-blue-600 dark:text-blue-400"></i>
+                        Spearheaded development of secure, scalable software infrastructure
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-chevron-right text-blue-600 dark:text-blue-400"></i>
+                        Led a team of 10 engineers for mission-critical tools
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Education</h2>
+            <div class="card-light dark:card-dark p-6 rounded-xl hover:scale-105 transition-transform">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200">Bachelor of Computer Science</h3>
+                <p class="text-gray-600 dark:text-gray-400">University of Melbourne</p>
+                <p class="text-gray-500">Graduated: 2012</p>
+            </div>
+        </section>
+
+        <!-- Awards & Recognition -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Awards & Recognition</h2>
+            <div class="card-light dark:card-dark p-6 rounded-xl hover:scale-105 transition-transform">
+                <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-trophy text-yellow-500"></i>
+                        Outstanding Contribution Award, Stark Industries (2015)
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-trophy text-yellow-500"></i>
+                        Innovator of the Year, Axis Technology Labs (2020)
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 mt-12 bg-gray-200 dark:bg-slate-800">
+        <div class="container mx-auto px-4 text-center text-gray-800 dark:text-gray-200">
+            <p class="mb-4">Currently mentoring at Women Who Code Melbourne and Melbourne Coding is Good Academy</p>
+            <p class="text-gray-500">© 2024 Rebecca Liu. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
